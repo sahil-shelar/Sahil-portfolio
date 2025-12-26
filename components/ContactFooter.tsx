@@ -1,7 +1,7 @@
+import { Loader2 } from 'lucide-react';
 import React, { useState } from 'react';
 import { PERSONAL_INFO } from '../constants';
 import MagneticButton from './MagneticButton';
-import { Loader2 } from 'lucide-react';
 
 const ContactFooter: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +10,7 @@ const ContactFooter: React.FC = () => {
     message: ''
   });
   
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,7 +22,7 @@ const ContactFooter: React.FC = () => {
     setLoading(true);
 
     const formPayload = new FormData(event.currentTarget);
-    formPayload.append("access_key", "4f831232-b55c-475e-82e8-87455329bf3e");
+    formPayload.append("access_key", accessKey);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
