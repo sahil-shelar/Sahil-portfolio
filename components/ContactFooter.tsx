@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { PERSONAL_INFO } from '../constants';
 import MagneticButton from './MagneticButton';
 import { Loader2 } from 'lucide-react';
@@ -17,52 +16,34 @@ const ContactFooter: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setLoading(true);
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-    const adminTemplateId = import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID;
-    const autoReplyTemplateId = import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID;
+    const formPayload = new FormData(event.currentTarget);
+    formPayload.append("access_key", "4f831232-b55c-475e-82e8-87455329bf3e");
 
-    // 1. Send Notification to YOU (Admin)
-    emailjs.send(
-      serviceId,
-      adminTemplateId,
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message,
-        to_name: PERSONAL_INFO.name,
-      },
-      publicKey
-    )
-    .then(() => {
-      // 2. Send Auto-Reply to USER (Visitor)
-      return emailjs.send(
-        serviceId,
-        autoReplyTemplateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email, // This sends the email TO the visitor
-          message: formData.message,
-          to_name: PERSONAL_INFO.name,
-        },
-        publicKey
-      );
-    })
-    .then(() => {
-      // Success: Both emails sent
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formPayload
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Form submitted successfully!");
+        // Clear React state to visually clear the inputs
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert("Form submission failed: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
       setLoading(false);
-      alert('Message sent successfully! Please check your inbox for a confirmation.');
-      setFormData({ name: '', email: '', message: '' });
-    })
-    .catch((error) => {
-      setLoading(false);
-      console.error('EmailJS Error:', error);
-      alert('Something went wrong. Please try again later.');
-    });
+    }
   };
 
   return (
@@ -152,7 +133,7 @@ const ContactFooter: React.FC = () => {
         </div>
         
         <div className="mt-20 text-xs text-gray-700">
-            © 2026 RAHUL SONDE. ALL RIGHTS RESERVED.
+            © 2026 ADESH SHELAR. ALL RIGHTS RESERVED.
         </div>
       </div>
     </footer>

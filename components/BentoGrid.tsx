@@ -1,4 +1,5 @@
-import React, { useLayoutEffect, useRef, useState, useEffect } from 'react'; // Added useEffect
+import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
+import { createPortal } from 'react-dom'; // <--- 1. Import createPortal
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { EDUCATION, CERTIFICATIONS } from '../constants';
@@ -10,15 +11,15 @@ const BentoGrid: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [selectedCert, setSelectedCert] = useState<{ name: string; image: string } | null>(null);
 
-  // 1. LOCK SCROLL WHEN MODAL IS OPEN
+  // Lock scroll when modal is open
   useEffect(() => {
     if (selectedCert) {
-      document.body.style.overflow = 'hidden'; // Disable scroll
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto'; // Enable scroll
+      document.body.style.overflow = 'auto';
     }
     return () => {
-      document.body.style.overflow = 'auto'; // Cleanup on unmount
+      document.body.style.overflow = 'auto';
     };
   }, [selectedCert]);
 
@@ -92,11 +93,10 @@ const BentoGrid: React.FC = () => {
         </div>
       </div>
 
-      {/* POPUP MODAL */}
-      {selectedCert && (
+      {/* POPUP MODAL - Using Portal to render at body level */}
+      {selectedCert && createPortal(
         <div 
-          // 2. UPDATED Z-INDEX to z-[9990] (high enough to cover content, low enough for cursor)
-          className="fixed inset-0 z-[9990] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity"
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity"
           onClick={() => setSelectedCert(null)}
         >
           <div 
@@ -126,7 +126,8 @@ const BentoGrid: React.FC = () => {
               />
             </div>
           </div>
-        </div>
+        </div>,
+        document.body // <--- Target DOM node
       )}
     </section>
   );

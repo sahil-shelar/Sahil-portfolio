@@ -43,31 +43,30 @@ const Hero: React.FC = () => {
     <section ref={containerRef} className="relative min-h-screen flex flex-col justify-center px-6 lg:px-20 z-10">
       <div className="max-w-5xl">
         <h1 ref={titleRef} className="font-display font-bold text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
-          <div className="overflow-hidden"><span className="hero-text-line block text-white">DATA</span></div>
-          <div className="overflow-hidden"><span className="hero-text-line block text-white/50">ANALYST</span></div>
-          <div className="overflow-hidden"><span className="hero-text-line block text-gradient">& QA ENGINEER</span></div>
+          <div className="overflow-hidden"><span className="hero-text-line block text-white">FULL</span></div>
+          <div className="overflow-hidden"><span className="hero-text-line block text-white/50">STACK</span></div>
+          <div className="overflow-hidden"><span className="hero-text-line block text-gradient">DEVELOPER</span></div>
         </h1>
         
-        <p ref={subtitleRef} className="text-xl md:text-2xl text-gray-400 max-w-2xl mb-12 font-light">
-          {PERSONAL_INFO.summary}
-        </p>
+        <div 
+          ref={subtitleRef} 
+          className="max-w-3xl mb-12 border-l-2 border-green-500 pl-6 opacity-90"
+        >
+          {PERSONAL_INFO.summary.map((paragraph, index) => (
+            <p 
+              key={index} 
+              className="text-base md:text-lg text-gray-300 leading-7 mb-4 last:mb-0"
+            >
+              {paragraph}
+            </p>
+          ))}
+        </div>
 
         <div className="hero-btn relative z-50">
           <MagneticButton href="#contact">
             HIRE ME <ArrowDownRight className="ml-2 w-5 h-5" />
           </MagneticButton>
         </div>
-      </div>
-      
-      <div className="absolute bottom-10 right-10 hidden md:block animate-spin-slow opacity-20 pointer-events-none">
-        <svg width="120" height="120" viewBox="0 0 100 100" className="fill-white">
-          <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
-          <text>
-            <textPath href="#circlePath" className="font-display uppercase tracking-widest text-[10px]">
-              Analysis • Visualization • Engineering •
-            </textPath>
-          </text>
-        </svg>
       </div>
     </section>
   );

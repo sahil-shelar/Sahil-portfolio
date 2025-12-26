@@ -1,125 +1,113 @@
 import { Experience, Project, Education, Skill } from './types';
 
 export const PERSONAL_INFO = {
-  name: "Rahul Sonde",
-  title: "Data Analytics & QA Engineer",
-  email: "rahulsonde@gmail.com",
-  phone: "9766859580",
+  name: "Adesh Shelar",
+  title: "Full Stack Developer",
+  email: "adesh.shelar.in@gmail.com",
+  phone: "+91-9511775471",
   location: "Pune, Maharashtra, India",
-  linkedin: "linkedin.com/in/rahulsonde",
-  summary: "Analytical professional with 1.5 years of software testing experience and advanced training in business analytics. Proven ability to leverage data analytics tools including Python, SQL, Power BI, and R to extract actionable insights."
-};
+  linkedin: "linkedin.com/in/adesh-shelar",
+  summary: [
+      "Results-oriented Full Stack Developer with 2 years of experience designing and deploying scalable web solutions. Proficient in backend architecture using Node.js, Python, MongoDB, and Docker, complemented by strong expertise in frontend frameworks including Vue.js and React.js.",
+      "Adept at Agile methodologies, system optimization, and delivering high-performance SaaS applications that drive operational efficiency."
+    ]
+  };
 
 export const SKILLS: Skill[] = [
+  // Frontend [cite: 6]
+  { name: "ReactJS", category: "code" },
+  { name: "VueJS", category: "code" },
+  { name: "Redux", category: "code" },
+  { name: "Vuex", category: "code" },
+  { name: "HTML/CSS", category: "code" },
+  { name: "Tailwind/Bootstrap", category: "code" },
+  // Backend [cite: 7]
+  { name: "NodeJS", category: "code" },
+  { name: "ExpressJS", category: "code" },
+  { name: "SailsJS", category: "code" },
   { name: "Python", category: "code" },
-  { name: "SQL", category: "code" },
-  { name: "R", category: "code" },
-  { name: "Power BI", category: "data" },
-  { name: "Tableau", category: "data" },
-  { name: "Excel (Advanced)", category: "data" },
-  { name: "MySQL", category: "tool" },
-  { name: "PostgreSQL", category: "tool" },
-  { name: "ETL Processes", category: "data" },
-  { name: "Predictive Analytics", category: "data" },
-  { name: "A/B Testing", category: "data" },
-  { name: "SDLC", category: "tool" },
-  { name: "Agile/Scrum", category: "tool" },
+  { name: "Java", category: "code" },
+  // Database [cite: 8]
+  { name: "MongoDB", category: "data" },
+  { name: "MySQL", category: "data" },
+  { name: "ElasticSearch", category: "data" },
+  // Tools & Others [cite: 10, 11]
+  { name: "Docker", category: "tool" },
+  { name: "Linux", category: "tool" },
+  { name: "RabbitMQ", category: "tool" },
+  { name: "Git/Github", category: "tool" },
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
     id: "exp-1",
-    role: "Test Engineer",
-    company: "GlobalStep",
-    location: "Maharashtra, India",
-    period: "July 2022 – Sept 2023",
+    role: "Associate Software Developer", // 
+    company: "Provakil Tech Services Pvt. Ltd.", // 
+    location: "Pune, Maharashtra", // 
+    period: "August 2024 - Present", // [cite: 28]
     description: [
-      "Executed comprehensive software testing procedures ensuring 99%+ accuracy in bug identification.",
-      "Collaborated with cross-functional development teams to analyze requirements and implement QA protocols.",
-      "Utilized SQL queries to validate data integrity across databases and verify backend functionality.",
-      "Created detailed analytics dashboards to track defect metrics, improving team productivity.",
-      "Reduced critical bugs by systematically identifying software vulnerabilities through root cause analysis."
+      "Contributed to the development of responsive SaaS web applications using Node.js, MongoDB, and Vue.js.", // [cite: 29]
+      "Spearheaded enhancements to the Calendar module, implementing nested sorting and reducing manual navigation effort by 50%.", // [cite: 31]
+      "Built Python-based background workers with RabbitMQ, reducing processing time by 50% and offloading 50-60% of API workload.", // [cite: 32, 33]
+      "Integrated Microsoft Graph API for email synchronization, increasing delivery consistency by 30%.", // [cite: 34]
+      "Collaborated on Docker deployments and optimized backend performance, achieving a 20% reduction in API latency.", // [cite: 35]
+      "Reduced bugs by 50% through code quality improvements and user feedback implementation." // [cite: 30]
+    ]
+  },
+  {
+    id: "exp-2",
+    role: "Software Developer Intern", // 
+    company: "Sarathi Dravate Technologies LLP", // 
+    location: "Pune, Maharashtra", // 
+    period: "Jan 2022 - Apr 2022", // [cite: 38]
+    description: [
+      "Developed an Attendance Management web application utilizing facial recognition technology.", // [cite: 39]
+      "Attained a 95% accuracy rate during authentication processes for secure logins.", // [cite: 40]
+      "Utilized Python, Flask, OpenCV, and Face-Recognition for implementation." // [cite: 41]
     ]
   }
 ];
 
 export const EDUCATION: Education[] = [
   {
-    degree: "MBA in Business Analytics",
-    school: "Neville Wadia Institute of Management Studies",
-    year: "2023 – 2025",
-    details: ["Specialized in advanced analytics, predictive modeling, data mining", "Coursework: Machine Learning, Database Management"]
+    degree: "M.Sc in Computer Science", // 
+    school: "Nowrosjee Wadia College Pune", // 
+    year: "2022-2024", // [cite: 14]
+    details: ["specialization in Computer Science"] 
   },
   {
-    degree: "BBA in Computer Applications",
-    school: "Christ University, Pune - Lavasa",
-    year: "2019 – 2022",
-    details: ["Strong foundation in programming, database systems, and business management"]
+    degree: "B.Sc in Computer Science", // 
+    school: "Nowrosjee Wadia College Pune", // [cite: 16]
+    year: "2018-2022", // [cite: 16]
+    details: ["Foundation in Computer Science"]
   }
 ];
 
 export const PROJECTS: Project[] = [
   {
     id: "proj-1",
-    title: "Weather Forecast Dashboard",
-    category: "Power BI",
-    tech: ["Power BI", "Data Viz", "UX Design"],
-    description: "Interactive weather dashboard prioritizing user experience with streamlined layout for forecasts and air quality monitoring."
-  },
-  {
-    id: "proj-2",
-    title: "End-to-End Analytics Pipeline",
-    category: "Engineering",
-    tech: ["Python", "SQL", "Automation"],
-    description: "Automated data reporting solution reducing manual reporting time by 60% through efficient dataset processing."
-  },
-  {
-    id: "proj-3",
-    title: "Business Performance Monitors",
-    category: "Business Intelligence",
-    tech: ["Power BI", "Real-time Data"],
-    description: "Interactive dashboards for business performance monitoring, enabling stakeholders to make real-time data-driven decisions."
-  },
-  {
-    id: "proj-4",
-    title: "Strategic Predictive Modeling",
-    category: "Data Science",
-    tech: ["R", "Statistical Analysis"],
-    description: "Conducted statistical analysis using R to deliver actionable insights for business strategy optimization."
+    title: "Video Streaming Platform", // [cite: 43]
+    category: "Full Stack",
+    tech: ["JavaScript", "Nodejs", "Express", "MongoDB", "Cloudinary"], // [cite: 46]
+    description: "Developed backend functionality for a comprehensive platform featuring user, video, playlist, and subscription management APIs." // [cite: 44, 45]
   }
 ];
 
 export const CERTIFICATIONS = [
   { 
-    name: "Data Analytics Certification", 
-    image: "/certificates/tutedude.png" 
-  },
+    name: "JavaScript (Intermediate) - HackerRank", 
+    image: "/certificates/HackerRank_JavaScript.png" 
+  }, //
   { 
-    name: "The Complete SQL Bootcamp", 
-    image: "/certificates/SQL.png" 
-  },
+    name: "Introduction to Data Analytics - IBM", 
+    image: "/certificates/IBM_Data_Analytics.png" 
+  }, //
   { 
-    name: "The Complete Python Pro Bootcamp", 
-    image: "/certificates/PYTHON.png" 
-  },
+    name: "100 Days of Code: The Complete Python Pro Bootcamp", 
+    image: "/certificates/Udemy_Python_Bootcamp.png" 
+  }, //
   { 
-    name: "SQL Fundamentals Masterclass", 
-    image: "/certificates/SQL-Masterclass.png" 
-  },
-  { 
-    name: "Data Analytics Foundation", 
-    image: "/certificates/DataAnalyticsFoundation.png" 
-  },
-  { 
-    name: "Share Data Using Google Data Cloud Skill Badge", 
-    image: "/certificates/Badge1.png" 
-  },
-  { 
-    name: "Google Cloud - Command Line Skill Badge", 
-    image: "/certificates/Badge2.png" 
-  },
-  { 
-    name: "Streaming Analytics into BigQuery Skill Badge", 
-    image: "/certificates/Badge3.png" 
-  }
+    name: "Python Mega Course: Go Beginner to Expert in Python3", 
+    image: "/certificates/Udemy_Python_Mega_Course.png" 
+  } //
 ];
