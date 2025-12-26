@@ -32,13 +32,14 @@ const CustomCursor: React.FC = () => {
 
   return (
     <>
+      {/* Increased z-index to 10000 to stay above the modal (which is 9999) */}
       <div 
         ref={cursorRef} 
-        className="fixed top-0 left-0 w-3 h-3 bg-cyber-lime rounded-full pointer-events-none z-[9999] mix-blend-difference transform -translate-x-1/2 -translate-y-1/2"
+        className="fixed top-0 left-0 w-3 h-3 bg-cyber-lime rounded-full pointer-events-none z-[10000] mix-blend-difference transform -translate-x-1/2 -translate-y-1/2"
       />
       <div 
         ref={followerRef} 
-        className="fixed top-0 left-0 w-8 h-8 border border-cyber-lime rounded-full pointer-events-none z-[9998] opacity-50 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out"
+        className="fixed top-0 left-0 w-8 h-8 border border-cyber-lime rounded-full pointer-events-none z-[10000] opacity-50 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out"
       />
     </>
   );
