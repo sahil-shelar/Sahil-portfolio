@@ -1,47 +1,74 @@
-# 🚀 Rahul Sonde - Portfolio 2026
+🚀 Adesh Shelar - Full Stack Developer Portfolio
+"Building Scalable Solutions from Frontend to Backend"
 
-![React](https://img.shields.io/badge/React-19.0-61DAFB?logo=react&style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript&style=flat-square)
-![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite&style=flat-square)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?logo=tailwind-css&style=flat-square)
-![GSAP](https://img.shields.io/badge/GSAP-Animations-88CE02?style=flat-square)
+An immersive, futuristic portfolio website built for Adesh Shelar, a Results-oriented Full Stack Developer with 2 years of experience. This project features a high-performance UI with glassmorphism aesthetics, complex GSAP animations, a magnetic interaction system, and a responsive bento-style layout.
 
-> **"Data, Data, Everywhere"**
+✨ Key Features
+Futuristic UI/UX: Dark-themed "Midnight" aesthetic with "Cyber Lime" and "Neon Blue" accents.
 
-An immersive, futuristic portfolio website built for a **Data Analyst & QA Engineer**. This project features a high-performance UI with glassmorphism aesthetics, complex GSAP animations, a magnetic interaction system, and a responsive Bento Grid layout.
+Advanced Animations:
 
-## ✨ Key Features
+GSAP & ScrollTrigger: Smooth scroll-based reveals for the experience timeline and project gallery.
 
-* **Futuristic UI/UX**: Dark-themed "Midnight" aesthetic with "Cyber Lime" and "Electric Violet" accents.
-* **Advanced Animations**: 
-    * **GSAP & ScrollTrigger**: Smooth scroll-based reveals for the timeline and projects.
-    * **Magnetic Buttons**: Interactive buttons that gravitate towards the cursor.
-    * **Custom Cursor**: A trailing cursor implementation for a polished feel.
-* **Bento Grid Layout**: A modern, responsive grid to showcase education and certifications.
-* **Interactive Galleries**: 3D tilt effects on project cards and certificate modal popups.
-* **Working Contact Form**: Integrated with **EmailJS** for direct enquiries and auto-replies.
-* **Responsive Design**: Fully optimized for mobile, tablet, and desktop screens.
+Magnetic Interaction: Interactive buttons that gravitate towards the cursor using GSAP quickTo.
 
-## 🛠️ Tech Stack
+Custom Cursor: A multi-layered trailing cursor implementation for a polished feel.
 
-* **Core**: [React 19](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
-* **Build Tool**: [Vite](https://vitejs.dev/)
-* **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-* **Animation**: [GSAP (GreenSock Animation Platform)](https://gsap.com/)
-* **Icons**: [Lucide React](https://lucide.dev/)
-* **Email Service**: [EmailJS](https://www.emailjs.com/)
+Knowledge Matrix: A responsive Bento Grid layout showcasing educational milestones and professional certifications.
 
-## 📂 Project Structure
+Professional Trajectory: A vertical timeline illustrating career growth from internships to Associate roles.
 
-```bash
+Interactive Modal: A portal-based certification viewer for high-resolution certificate display.
+
+Dynamic Background: Animated "moving blobs" and grain textures for an immersive depth effect.
+
+🛠️ Tech Stack
+Core: React 19, TypeScript
+
+Build Tool: Vite
+
+Styling: Tailwind CSS
+
+Animation: GSAP (GreenSock Animation Platform)
+
+Icons: Lucide React
+
+Form Handling: Integrated with Web3Forms for reliable inquiry delivery.
+
+📂 Project Structure
+Bash
+
+├── public/               # Static assets (Certificates, images)
 ├── src/
-│   ├── components/       # UI Components (Hero, BentoGrid, etc.)
-│   ├── public/           # Static assets (Certificates, images)
-│   ├── App.tsx           # Main application entry
-│   ├── constants.ts      # Centralized content (Texts, Links, Data)
+│   ├── components/       # UI Components
+│   │   ├── Background.tsx        # Animated background blobs
+│   │   ├── BentoGrid.tsx         # Education & Certs grid
+│   │   ├── ExperienceTimeline.tsx # Career path
+│   │   ├── Hero.tsx               # Main landing section
+│   │   └── ProjectGallery.tsx     # Work showcases
+│   ├── constants.ts      # Centralized content (Experience, Skills, Projects)
 │   ├── types.ts          # TypeScript interfaces
-│   └── index.css         # Global styles & Tailwind directives
-├── .env                  # Environment variables (not committed)
-├── tailwind.config.js    # Tailwind theme configuration
-└── vite.config.ts        # Vite configuration
+│   ├── App.tsx           # Main application shell
+│   └── index.tsx         # React entry point
+├── index.html            # Global styles and tailwind config
+├── vite.config.ts        # Vite environment & alias settings
+└── tsconfig.json         # TypeScript configuration
+👨‍💻 Professional Background
+Current Role: Associate Software Developer at Provakil Tech Services Pvt. Ltd..
 
+Specialization: Node.js, Python, MongoDB, and React.js.
+
+Education: M.Sc in Computer Science from Nowrosjee Wadia College, Pune.
+
+Achievements: Reduced manual navigation by 50% and offloaded 60% of API workload through system optimization.
+
+🔧 Getting Started
+Clone the repository
+
+Install dependencies: npm install
+
+Setup environment: Create a .env file and add your VITE_WEB3FORMS_ACCESS_KEY.
+
+Run Dev Server: npm run dev
+
+© 2026 Adesh Shelar. All Rights Reserved.
