@@ -14,6 +14,12 @@ export const PERSONAL_INFO = {
   };
 
 export const SKILLS: Skill[] = [
+  // Backend [cite: 7]
+  { name: "NodeJS", category: "code" },
+  { name: "ExpressJS", category: "code" },
+  { name: "SailsJS", category: "code" },
+  { name: "Python", category: "code" },
+  { name: "Java", category: "code" },
   // Frontend [cite: 6]
   { name: "ReactJS", category: "code" },
   { name: "VueJS", category: "code" },
@@ -21,12 +27,6 @@ export const SKILLS: Skill[] = [
   { name: "Vuex", category: "code" },
   { name: "HTML/CSS", category: "code" },
   { name: "Tailwind/Bootstrap", category: "code" },
-  // Backend [cite: 7]
-  { name: "NodeJS", category: "code" },
-  { name: "ExpressJS", category: "code" },
-  { name: "SailsJS", category: "code" },
-  { name: "Python", category: "code" },
-  { name: "Java", category: "code" },
   // Database [cite: 8]
   { name: "MongoDB", category: "data" },
   { name: "MySQL", category: "data" },
