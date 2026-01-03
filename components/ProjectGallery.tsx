@@ -56,6 +56,11 @@ const ProjectGallery: React.FC = () => {
     });
   };
 
+  const handleCardClick = (url: string) => {
+    if (!url) return;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section ref={containerRef} className="px-6 lg:px-20 py-24 relative z-10 max-w-7xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-display font-bold mb-16 text-white">
@@ -69,6 +74,7 @@ const ProjectGallery: React.FC = () => {
             className="project-card group perspective-1000"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
+            onClick={() => handleCardClick(project.projectUrl)}
           >
             <div className="glass-card p-8 rounded-3xl h-full flex flex-col justify-between transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:border-white/20">
               <div>

@@ -13,6 +13,7 @@ export interface Project {
   tech: string[];
   description: string;
   category: string;
+  projectUrl: string;
 }
 
 export interface Education {

@@ -89,14 +89,16 @@ export const PROJECTS: Project[] = [
     title: "Async SaaS – Scalable Backend System", // [cite: 42]
     category: "Backend",
     tech: ["Node.js", "Python", "MongoDB", "RabbitMQ", "Docker"], // [cite: 46]
-    description: "The backend project is designed to reflect real-world SaaS architecture patterns such as asynchronous job processing, service isolation, and containerized deployments." // [cite: 44, 45]
+    description: "The backend project is designed to reflect real-world SaaS architecture patterns such as asynchronous job processing, service isolation, and containerized deployments.", // [cite: 44, 45]
+    projectUrl: "https://github.com/sahil-shelar/async-saas-backend"
   },
   {
     id: "proj-1",
     title: "Video Streaming Platform", // [cite: 43]
     category: "Full Stack",
     tech: ["JavaScript", "Nodejs", "Express", "MongoDB", "Cloudinary"], // [cite: 46]
-    description: "Developed backend functionality for a comprehensive platform featuring user, video, playlist, and subscription management APIs." // [cite: 44, 45]
+    description: "Developed backend functionality for a comprehensive platform featuring user, video, playlist, and subscription management APIs.",
+    projectUrl: "https://github.com/sahil-shelar/GlitchStreamingPlatform" // [cite: 44, 45]
   }
 ];
 
