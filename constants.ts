@@ -86,9 +86,9 @@ export const EDUCATION: Education[] = [
 export const PROJECTS: Project[] = [
   {
     id: "proj-0",
-    title: "AsyncSaaS – Scalable Backend System", // [cite: 42]
+    title: "Async SaaS – Scalable Backend System", // [cite: 42]
     category: "Backend",
-    tech: ["Node.js, Python, MongoDB, RabbitMQ, Docker"], // [cite: 46]
+    tech: ["Node.js", "Python", "MongoDB", "RabbitMQ", "Docker"], // [cite: 46]
     description: "The backend project is designed to reflect real-world SaaS architecture patterns such as asynchronous job processing, service isolation, and containerized deployments." // [cite: 44, 45]
   },
   {
