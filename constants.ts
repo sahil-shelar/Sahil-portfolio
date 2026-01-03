@@ -46,12 +46,12 @@ export const EXPERIENCE: Experience[] = [
     location: "Pune, Maharashtra", // 
     period: "August 2024 - Present", // [cite: 28]
     description: [
-      "Contributed to the development of responsive SaaS web applications using Node.js, MongoDB, and Vue.js.", // [cite: 29]
-      "Spearheaded enhancements to the Calendar module, implementing nested sorting and reducing manual navigation effort by 50%.", // [cite: 31]
-      "Built Python-based background workers with RabbitMQ, reducing processing time by 50% and offloading 50-60% of API workload.", // [cite: 32, 33]
-      "Integrated Microsoft Graph API for email synchronization, increasing delivery consistency by 30%.", // [cite: 34]
-      "Collaborated on Docker deployments and optimized backend performance, achieving a 20% reduction in API latency.", // [cite: 35]
-      "Reduced bugs by 50% through code quality improvements and user feedback implementation." // [cite: 30]
+      "Contributed to the design and development of a multi-tenant SaaS platform serving enterprise clients, with a primary focus on backend services and system-level features.", // [cite: 29]
+      "Designed and implemented Python-based background workers and consumers using RabbitMQ to handle large-scale asynchronous processing, reducing synchronous API load by 50–60%.", // [cite: 31]
+      "Developed and maintained RESTful APIs using Node.js and Sails.js, integrating with MongoDB and Elasticsearch for efficient data access and search.", // [cite: 32, 33]
+      "Improved system performance and reliability through query optimization, background processing, and architectural refinements, achieving  ̃20% reduction in API latency.", // [cite: 34]
+      "Integrated third-party services including Microsoft Graph API to automate email synchronization workflows, improving delivery consistency by 30%.", // [cite: 35]
+      "Containerized services using Docker and collaborated closely with cross-functional teams on production deployments and releases." // [cite: 30]
     ]
   },
   {
@@ -84,6 +84,13 @@ export const EDUCATION: Education[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    id: "proj-0",
+    title: "AsyncSaaS – Scalable Backend System", // [cite: 42]
+    category: "Backend",
+    tech: ["Node.js, Python, MongoDB, RabbitMQ, Docker"], // [cite: 46]
+    description: "The backend project is designed to reflect real-world SaaS architecture patterns such as asynchronous job processing, service isolation, and containerized deployments." // [cite: 44, 45]
+  },
   {
     id: "proj-1",
     title: "Video Streaming Platform", // [cite: 43]
